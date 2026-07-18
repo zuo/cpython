@@ -2648,7 +2648,7 @@ Notes:
    example, "month/day/year" versus "day/month/year"), and the output may
    contain non-ASCII characters.
 
-   .. versionchanged:: 3.14
+   .. versionchanged:: next
       The :meth:`~.datetime.strptime` method, if used with the ``%c``
       or ``%x`` format code, no longer requires the *year* part of the
       input to be zero-padded to the usual width (which is either 4 or
