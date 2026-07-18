@@ -635,7 +635,7 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
 .. function:: ismethoddescriptor(object)
 
    Return ``True`` if the object is a method descriptor, but not if
-   :func:`isclass`, :func:`ismethod` or :func:`isfunction` are true.
+   :func:`isclass`, :func:`ismethod` or :func:`isfunction` is true.
 
    This, for example, is true of ``int.__add__``.  An object passing this test
    has a :meth:`~object.__get__` method, but not a :meth:`~object.__set__`
@@ -645,8 +645,8 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
 
    Method descriptors that also pass any of the other tests (:func:`!isclass`,
    :func:`!ismethod` or :func:`!isfunction`) make this function return ``False``,
-   simply because those other tests promise more -- you can, e.g., count on
-   having the :attr:`~method.__func__` attribute when an object passes
+   simply because those other tests promise more -- you can, for example, count
+   on having the :attr:`~method.__func__` attribute when an object passes
    :func:`ismethod`.
 
    .. versionchanged:: 3.13
@@ -658,7 +658,7 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
 .. function:: isdatadescriptor(object)
 
    Return ``True`` if the object is a data descriptor, but not if
-   :func:`isclass`, :func:`ismethod` or :func:`isfunction` are true.
+   :func:`isclass`, :func:`ismethod` or :func:`isfunction` is true.
 
    Data descriptors always have a :meth:`~object.__set__` method and/or
    a :meth:`~object.__delete__` method.  Optionally, they may also have a
