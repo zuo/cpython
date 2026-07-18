@@ -666,7 +666,7 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
 
    Examples of data descriptors are :func:`properties <property>`, getsets and
    member descriptors.  Note that for the latter two (defined only in C extension
-   modules) more specific tests are available: :func:`isgetsetdescriptor` and
+   modules), more specific tests are available: :func:`isgetsetdescriptor` and
    :func:`ismemberdescriptor`, respectively.
 
    While data descriptors may have also :attr:`~definition.__name__` and
