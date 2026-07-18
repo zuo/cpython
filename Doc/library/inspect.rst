@@ -669,7 +669,7 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
    modules), more specific tests are available: :func:`isgetsetdescriptor` and
    :func:`ismemberdescriptor`, respectively.
 
-   While data descriptors may have also :attr:`~definition.__name__` and
+   While data descriptors may also have :attr:`~definition.__name__` and
    :attr:`!__doc__` attributes (as properties, getsets and member descriptors
    do), this is not necessarily the case in general.
 
