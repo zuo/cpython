@@ -98,8 +98,8 @@ class ButtonTest(unittest.TestCase):
             dialog.buttons['Help'].invoke()
             title, contents = view.kwds['title'], view.kwds['contents']
         self.assertEqual(title, 'Help for IDLE preferences')
-        self.assertTrue(contents.startswith('When you click') and
-                        contents.endswith('a different name.\n'))
+        self.assertStartsWith(contents, 'When you click')
+        self.assertEndsWith(contents,'a different name.\n')
 
 
 class FontPageTest(unittest.TestCase):
@@ -1542,6 +1542,17 @@ class VarTraceTest(unittest.TestCase):
         cb()
         self.assertIn('section', changes['main'])
         self.assertEqual(changes['main']['section']['option'], '42')
+        changes.clear()
+
+        # gh-83653: a blank int entry is not saved as bad config data.
+        sv = StringVar(root)
+        cb = self.tracers.make_callback(sv, ('main', 'section', 'option'))
+        sv.set('')
+        cb()
+        self.assertNotIn('section', changes['main'])
+        sv.set('5')
+        cb()
+        self.assertEqual(changes['main']['section']['option'], '5')
         changes.clear()
 
     def test_attach_detach(self):
