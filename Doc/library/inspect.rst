@@ -643,8 +643,8 @@ attributes (see :ref:`import-mod-attrs` for module attributes):
    attributes varies.  A :attr:`~definition.__name__` attribute is usually
    sensible, and :attr:`~definition.__doc__` often is.
 
-   Method descriptors that also pass any of the other tests (:func:`isclass`,
-   :func:`ismethod` or :func:`isfunction`) make this function return ``False``,
+   Method descriptors that also pass any of the other tests (:func:`!isclass`,
+   :func:`!ismethod` or :func:`!isfunction`) make this function return ``False``,
    simply because those other tests promise more -- you can, e.g., count on
    having the :attr:`~method.__func__` attribute when an object passes
    :func:`ismethod`.
